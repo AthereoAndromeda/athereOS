@@ -68,19 +68,19 @@
     };
 
     scheme = "${inputs.tt-schemes}/base16/moonlight.yaml";
-    # {scheme = "${inputs.tt-schemes}/base16/rebecca.yaml";}
-    # {scheme = "${inputs.tt-schemes}/base16/moonlight.yaml";}
-    # {scheme = "${inputs.tt-schemes}/base16/icy.yaml";}
-    # {scheme = "${inputs.tt-schemes}/base16/pasque.yaml";}
-    # {scheme = "${inputs.tt-schemes}/base16/mellow-purple.yaml";}
-    # {scheme = "${inputs.tt-schemes}/base16/stella.yaml";}
-    # {scheme = "${inputs.tt-schemes}/base16/nebula.yaml";}
-    # {scheme = "${inputs.tt-schemes}/base16/darkviolet.yaml";}
-    # {scheme = "${inputs.tt-schemes}/base16/catppuccin-frappe.yaml";}
-    # {scheme = "${inputs.tt-schemes}/base16/rose-pine-moon.yaml";}       # Main
-    # {scheme = "${inputs.tt-schemes}/base16/tokyodark.yaml";}
-    # {scheme = "${inputs.tt-schemes}/base16/tokyo-night-storm.yaml";}
-    # {scheme = "${inputs.tt-schemes}/base16/uwunicorn.yaml";}
+    # scheme = "${inputs.tt-schemes}/base16/rebecca.yaml";
+    # scheme = "${inputs.tt-schemes}/base16/moonlight.yaml";
+    # scheme = "${inputs.tt-schemes}/base16/icy.yaml";
+    # scheme = "${inputs.tt-schemes}/base16/pasque.yaml";
+    # scheme = "${inputs.tt-schemes}/base16/mellow-purple.yaml";
+    # scheme = "${inputs.tt-schemes}/base16/stella.yaml";
+    # scheme = "${inputs.tt-schemes}/base16/nebula.yaml";
+    # scheme = "${inputs.tt-schemes}/base16/darkviolet.yaml";
+    # scheme = "${inputs.tt-schemes}/base16/catppuccin-frappe.yaml";
+    # scheme = "${inputs.tt-schemes}/base16/rose-pine-moon.yaml";       # Main
+    # scheme = "${inputs.tt-schemes}/base16/tokyodark.yaml";
+    # scheme = "${inputs.tt-schemes}/base16/tokyo-night-storm.yaml";
+    # scheme = "${inputs.tt-schemes}/base16/uwunicorn.yaml";
   in {
     nixosConfigurations = {
       athereo-nixos = lib.nixosSystem {
