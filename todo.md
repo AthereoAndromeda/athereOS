@@ -22,6 +22,7 @@ a handy list since i keep forgetting
 - [ ] waybar: fix fullscreen not changing when switching workspaces
 - [x] waybar: Add wallpaper-switcher. Switches between live wallpaper and static
 - [ ] inhibit-idle and workspace submap detection
+- [ ] fix: wl-screenrec widget
 
 ## Others
 - [ ] rofi: Stylize powermenu
