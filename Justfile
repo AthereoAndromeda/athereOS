@@ -39,8 +39,8 @@ format:
 
 # Cleans nix garbage
 [group('utils')]
-clean:
-    ./scripts/clean-profile.sh
+clean older-than="10d":
+    echo $SUDO_PASS | sudo -S nix-collect-garbage --delete-older-than "{{older-than}}"
 
 # Lists all Nix Generations
 [group('utils')]
