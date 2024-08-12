@@ -1,0 +1,32 @@
+(defpoll items
+  :interval "1s"
+  :initial "Empty"
+  `cliphist list | tail`)
+
+(defwindow clipboard
+  :monitor 0
+  :geometry (geometry
+    :width "30%"
+    :height "50%"
+    ; :anchor "right"
+    :anchor "center"
+    )
+  :exclusive false
+  ; :focusable true
+
+  (box :class "main-container" :orientation "v"
+    (button :onclick "eww kill -c .")
+  
+    (box :class "header"
+      (label :class "header-text" :text "clipboard manager")
+    )
+
+    (box :class "content"
+      ; (label :text "kamusta mga paru paru")
+      ; (literal :content "(label :text ${items})")
+      (label :text "${items}")
+    )
+  )
+)
+
+

@@ -1,0 +1,53 @@
+(defvar scripts_dir "./scripts")
+
+(defvar fi_active true) ;; Temporary
+
+(defpoll time :interval "20s" `date +" %a %b %d %Y (%H:%M)"`)
+
+(deflisten workspaces
+  :initial "(box (label :text \"◯  ◯  ◯  ◯  ◯\"))"
+  `python3 ./scripts/workspaces.py`)
+
+(defwindow bar
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry
+    :width "100%"
+    :height "0%"
+    :anchor "top center"
+    )
+  :exclusive true
+
+  (box :class "main-container"
+  
+    (box :class "workspaces" :halign "start"
+      (literal :content "${workspaces}")
+    )
+
+    (box :class "music" :halign "center" :spacing 10 :space-evenly false
+      (literal :content "(box :class \"music_icon\" )" )
+
+      (button :class "time_battery" :halign "end" "${time}")
+    )
+  )
+)
+
+(defwindow fullscreen_indicator
+  :monitor 0
+  :geometry (geometry 
+    :x "0%"
+    :y "10px"
+    :width "10%"
+    :height "10%"
+    :anchor "top center")
+    
+  :stacking "overlay"
+  :windowType "normal"
+
+  (box :class "fullscreen_indicator" :class {fi_active ? "active" : "inactive"}
+    (label :text "Fullscreen use material design"))
+  )
+
+(defwindow grouped_indicator
+  "hello")
+
