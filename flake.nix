@@ -67,9 +67,6 @@
       config.allowUnfreePredicate = pkg: true;
     };
 
-    username = "athereo";
-    name = "Angelo";
-
     scheme = "${inputs.tt-schemes}/base16/moonlight.yaml";
     # {scheme = "${inputs.tt-schemes}/base16/rebecca.yaml";}
     # {scheme = "${inputs.tt-schemes}/base16/moonlight.yaml";}
@@ -126,7 +123,7 @@
         ];
 
         specialArgs = {
-          inherit username name pkgs-unstable inputs nix-colors my-utils;
+          inherit pkgs-unstable inputs nix-colors my-utils;
         };
       };
     };
