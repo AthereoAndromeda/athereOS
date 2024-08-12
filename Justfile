@@ -45,7 +45,7 @@ clean older-than="10d":
 # Lists all Nix Generations
 [group('utils')]
 list:
-    ./scripts/list-generations.sh
+   echo $SUDO_PASS | sudo -S nix-env --list-generations --profile /nix/var/nix/profiles/system
 
 # Lists history of Nix Generations
 [group('utils')]
