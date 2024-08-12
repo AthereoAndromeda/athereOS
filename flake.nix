@@ -91,7 +91,17 @@
 
         modules = [
           base16.nixosModule
-          {inherit scheme;}
+          {
+            inherit scheme;
+
+            # Has to enabled before using Hyprland flake package.
+            nix.settings = {
+              substituters = ["https://hyprland.cachix.org"];
+              trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+            };
+
+            nixpkgs.overlays = overlays;
+          }
 
           # Import Home manager module
           inputs.home-manager.nixosModules.home-manager
@@ -111,8 +121,6 @@
               };
             };
           }
-
-          {nixpkgs.overlays = overlays;}
 
           ./hosts/athereo-nixos/configuration.nix
         ];
