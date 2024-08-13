@@ -6,7 +6,7 @@
     ./zoom.nix
 
     ./localsend/localsend.nix
-    ./code-editors
+    # ./code-editors # Temporarily disable visual code editors. Create options for them instead
     ./instant-messaging
   ];
 
