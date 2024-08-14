@@ -1,0 +1,31 @@
+@use "/home/athereo/.config/waybar/scheme" as *;
+@use "mixins" as *;
+
+#workspaces {
+	@include border;
+	@include theme;
+
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	/* border-radius: 10px; */
+	transition: none;
+	/* border: 2px solid $base04; */
+	/* color: #161320; */
+	/* background: #bd93f9; */
+	/* color: $base05; */
+	/* background: $base00; */
+	
+
+	button {
+		transition: .5s;
+		color: $base04;
+		
+		&.active {
+			/* background: $base02; */
+			color: $base0B;
+		}
+	}
+}

@@ -1,0 +1,6 @@
+@use "/home/athereo/.config/waybar/scheme" as *;
+
+@mixin theme($bg: $base00, $fg: $base05) {
+	background: $bg;
+	color: $fg
+}

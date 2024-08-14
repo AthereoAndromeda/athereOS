@@ -1,0 +1,8 @@
+@use "/home/athereo/.config/waybar/scheme" as *;
+
+@mixin border($color: $base03, $width: 2px, $radius: 10px) {
+  border: $width $color solid;
+  border-radius: $radius;
+}
+
+

@@ -5,7 +5,7 @@
 	  "hyprland/workspaces",
 	  "cpu",
 	  "memory",
-	  "custom/media",
+	  // "custom/media",
 	  "tray",
 	  "custom/fullscreen-checker",
 	  "custom/screenrecord"

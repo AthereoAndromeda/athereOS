@@ -1,0 +1,19 @@
+@use "/home/athereo/.config/waybar/scheme" as *;
+@use "mixins" as *;
+
+#clock {
+	@include theme;
+
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	/* color: #161320; */
+	/* background: #ABE9B3; */
+	/*background: #1A1826;*/
+	/* color: $base05; */
+	/* background: $base00; */
+}
