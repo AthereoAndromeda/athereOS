@@ -1,7 +1,5 @@
 set dotenv-load
 
-eval-cache := "true"
-
 alias fmt := format
 alias b := build
 alias t := test
@@ -24,7 +22,7 @@ test: format _git-add
 
 # Build in `test` mode, with lots of debug flags
 [group('build')]
-test-debug: format _git-add
+test-debug eval-cache="true": format _git-add
     echo $SUDO_PASS | sudo -S nixos-rebuild test --flake . --option eval-cache {{eval-cache}} --show-trace --print-build-logs --verbose
 
 # Update Nix Flakes
