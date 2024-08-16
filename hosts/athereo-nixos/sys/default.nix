@@ -21,4 +21,5 @@
   bluetooth.enable = lib.mkDefault true;
   xremap.enable = lib.mkDefault true;
   opengl.enable-unstable = lib.mkDefault false;
+  zerotierone.enable = lib.mkDefault false;
 }
