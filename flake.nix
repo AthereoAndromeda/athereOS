@@ -11,11 +11,6 @@
     # Only used to Generate GTK themes. Base16 is used for theming.
     nix-colors.url = "github:misterio77/nix-colors";
 
-    lix-module = {
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.91.0.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     hyprland = {
       type = "git";
       url = "https://github.com/hyprwm/Hyprland";
@@ -52,7 +47,6 @@
     base16,
     nix-colors,
     zjstatus,
-    lix-module,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -93,8 +87,6 @@
         inherit system;
 
         modules = [
-          lix-module.nixosModules.default
-
           base16.nixosModule
           {
             inherit scheme;
