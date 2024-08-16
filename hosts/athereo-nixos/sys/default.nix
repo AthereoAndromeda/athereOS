@@ -3,7 +3,6 @@
     ./avahi.nix
     ./bluetooth.nix
     ./utils.nix
-    ./mpvpaper.nix
     ./opengl.nix
     ./playerctl.nix
     ./virt.nix
@@ -16,6 +15,7 @@
     ./hypr
     ./lang
     ./networking
+    ./wallpaper-engines
   ];
 
   bluetooth.enable = lib.mkDefault true;

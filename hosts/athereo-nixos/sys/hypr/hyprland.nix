@@ -15,7 +15,6 @@
   environment.systemPackages = with pkgs; [
     eww
     swaynotificationcenter
-    swww
     libnotify
     rofi-wayland
     wl-clipboard
