@@ -1,0 +1,9 @@
+modmap:
+  - name: Global Config
+    remap:
+      CapsLock:
+        alone: Esc
+        alone_timeout_millis: 200
+        held: Ctrl_L
+
+      Esc: CapsLock

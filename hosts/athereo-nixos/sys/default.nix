@@ -6,7 +6,6 @@
     ./opengl.nix
     ./playerctl.nix
     ./virt.nix
-    ./xremap.nix
     ./X11.nix
     ./zerotier.nix
 
@@ -16,6 +15,7 @@
     ./lang
     ./networking
     ./wallpaper-engines
+    ./xremap
   ];
 
   bluetooth.enable = lib.mkDefault true;
