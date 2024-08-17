@@ -11,34 +11,41 @@ My desktop configuration using NixOS and Home Manager.
 
 ## Commit Message Style
 Categories of commits. In general the style of commit should be:  
-`branch/type/subtype(file_or_field_or_param): Message`
+`category/branch-name/type(subtype): Message`
 
-- `nix/`: Related to Nix scripts.
+<details>
+  <summary>Reveal more detailed information</summary>
+
+### Special Categories
+- `nix/`: Related to Nix.
   - `nix/overlays`: Changes in overlays
-  - `nix/build`: General change
-  - `nix/build(variant)`: Specific Change. e.g.: `nix/build(flake.nix)`
   - eg: 
-    - `nix/build: Change variable names`
-    - `chore/nix/build(flake.lock): Run nix flake update`
+    - `chore/nix(flake): Run nix flake update`
     - `nix/overlays(package): Added package overlay`
+
+- `build/`: Anything related to the build process
+  - e.g.: `build(Justfile): Add new recipe`
 
 - `hypr/`: Related to any hypr ecosystem
   - `hypr/hyprland`
   - `hypr/hypridle`
   - `hypr/hyprlock`
 
+- `pkgs/`: Package related changes.
+  - `pkgs/<pkg-name>`: Any general changes to a package.  eg: `pkgs/waybar: Add waybar`
+
 - `sys/`: System Related Changes
-  - `sys(pkg)`: System-related pkgs.  eg: `refactor/sys(avahi): Reformat printer drivers`
+  - `sys(type)`: Specific.  eg: `refactor/sys(firewall): Open port 443`
   
 - `home/`: Home-Manager Related. 
-  - `home(pkg)`: Home-related pkgs.  eg: `fix/style/home(zellij): Fix color`
+  - `home(type)`: Specific.  eg: `fix/style/home(base16): Fix color palette`
 
 Some more examples:
 - `style/home(oh-my-posh): Add base16 color scheme`
 - `feat/hypr/hyprland: New Keybinds`
 - 
 
-### General/Branch Commits
+### General/Branch Categories
 If the branch also apply for the above scenarios, prefix using the below.  
 e.g.: `fix/nix/build: Fix thing`
 
@@ -48,6 +55,8 @@ e.g.: `fix/nix/build: Fix thing`
 - `chore/`: Not exactly a fix, not exactly a feature. Use for something like `nix flake update`
 - `style/`: Any visual style changes. *NOT code style change. thats `refactor`*
 - `refactor/`: Code change or formatting
+
+</details>
 
 ## Building
 Simply run the following:  
