@@ -5,6 +5,7 @@
 # Used if `home-manager.useUserPackages = true;`
 source /etc/profiles/per-user/$USER/etc/profile.d/hm-session-vars.sh
 
+# Runs yazi, but sets the PWD to the last exited dir
 function yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
 	yazi "$@" --cwd-file="$tmp"
@@ -24,11 +25,6 @@ function ya() {
 		cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
-}
-
-# Spawn foot terminal and run yazi. Does not move to last exited dir.
-function yaz() {
-	foot yazi "$@"
 }
 
 eval "$(direnv hook bash)"
