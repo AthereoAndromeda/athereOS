@@ -122,9 +122,6 @@
       ffmpeg_7
     ])
     ++ (with pkgs-unstable; [
-      hypridle
-      hyprlock
-      hyprpicker
       appimage-run
     ]);
 
