@@ -20,9 +20,9 @@ a handy list since i keep forgetting
 ## Waybar
 - [ ] waybar: stylize fullscreen-checker
 - [ ] waybar: fix fullscreen not changing when switching workspaces
-- [x] waybar: Add wallpaper-switcher. Switches between live wallpaper and static
 - [ ] inhibit-idle and workspace submap detection
 - [ ] fix: wl-screenrec widget
+- [x] waybar: Add wallpaper-switcher. Switches between live wallpaper and static
 
 ## Others
 - [ ] rofi: Stylize powermenu
@@ -30,9 +30,7 @@ a handy list since i keep forgetting
 - [ ] theme: Add global theming and colors w/ base16
 - [ ] cliphist: Add script/cron job to remove old copies
 - [ ] trash: Remove old data with script
-- [ ] fonts: Add anurati
-- [ ] keyboard: Add ctrl/esc caps lock rebind
-
-## Completed
+- [x] keyboard: Add ctrl/esc caps lock rebind
+- [x] fonts: Add anurati
 - [x] swaync: Add to start.sh and configure style
 - [x] rofi: Add powermenu launcher
