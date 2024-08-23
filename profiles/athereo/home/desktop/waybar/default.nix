@@ -22,41 +22,42 @@
     $base0F: ${base0F};
   '';
 
-  build-scss = pkgs.stdenv.mkDerivation {
-    name = "sass-builder";
-    src = ./theme-1/scss;
+  build-scss = path:
+    pkgs.stdenv.mkDerivation {
+      name = "sass-builder";
+      src = path;
 
-    nativeBuildInputs = with pkgs; [
-      dart-sass
-      python312
-    ];
+      nativeBuildInputs = with pkgs; [
+        dart-sass
+        python312
+      ];
 
-    dontUnpack = true;
-    dontPatch = true;
-    dontConfigure = true;
-    dontInstall = true;
+      dontUnpack = true;
+      dontPatch = true;
+      dontConfigure = true;
+      dontInstall = true;
 
-    buildPhase = ''
-      mkdir -p $out
-      mkdir build
+      buildPhase = ''
+        mkdir -p $out
+        mkdir build
 
-      cd $src
-      python filter.py
-      cd ..
-      echo '${base16-text}' > build/_base16.scss;
+        cd $src
+        python filter.py
+        cd ..
+        echo '${base16-text}' > build/_base16.scss;
 
-      ls build
+        ls build
 
-      echo "Building SCSS..."
-      sass build/:$out/dist
-    '';
-  };
+        echo "Building SCSS..."
+        sass build/:$out/dist
+      '';
+    };
 in {
   programs.waybar.enable = true;
 
   xdg.configFile = {
     # "waybar/scheme.css".text = builtins.readFile (config.scheme inputs.base16-waybar);
-    "waybar/theme-1/dist".source = "${build-scss}/dist";
+    "waybar/theme-1/dist".source = "${build-scss ./theme-1/scss}/dist";
     "waybar/theme-1/config.jsonc".source = ./theme-1/config.jsonc;
     "waybar/theme-1/scripts".source = ./theme-1/scripts;
   };
