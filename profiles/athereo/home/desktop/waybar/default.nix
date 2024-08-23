@@ -1,6 +1,5 @@
 {
   config,
-  # inputs,
   pkgs,
   ...
 }: let
@@ -41,8 +40,6 @@
       mkdir -p $out
       mkdir build
 
-      # find $src -depth -type f ! -name "base16.scss" -exec cp {} build \;
-      # find "$src" -type f ! -name "base16.scss" -execdir cp {} "build"/{} \;
       cd $src
       python filter.py
       cd ..
@@ -58,11 +55,9 @@ in {
   programs.waybar.enable = true;
 
   xdg.configFile = {
-    "waybar/dist" = {
-      recursive = true;
-      source = "${build-scss}/dist";
-    };
     # "waybar/scheme.css".text = builtins.readFile (config.scheme inputs.base16-waybar);
-    "waybar/theme-1".source = ./theme-1;
+    "waybar/theme-1/dist".source = "${build-scss}/dist";
+    "waybar/theme-1/config.jsonc".source = ./theme-1/config.jsonc;
+    "waybar/theme-1/scripts".source = ./theme-1/scripts;
   };
 }

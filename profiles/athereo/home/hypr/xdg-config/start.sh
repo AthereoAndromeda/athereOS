@@ -16,7 +16,7 @@ mpvpaper -vs -o "no-audio loop" '*' "$HOME/.assets/cat-lofi.mp4" &
 
 # Topbar
 # eww open bar -c ~/.config/eww/custom-bar/ &
-sh  ~/.config/waybar/theme-1/launch-waybar.sh &
+sh  ~/.config/waybar/theme-1/scripts/launch-waybar.sh &
 
 
 # sleep 3
