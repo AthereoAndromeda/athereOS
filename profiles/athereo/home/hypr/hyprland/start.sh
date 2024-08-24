@@ -18,16 +18,5 @@ mpvpaper -vs -o "no-audio loop" '*' "$HOME/.assets/cat-lofi.mp4" &
 # eww open bar -c ~/.config/eww/custom-bar/ &
 sh  ~/.config/waybar/theme-1/scripts/launch-waybar.sh &
 
-
-# sleep 3
-
 # Auto Mount
 udiskie &
-
-# Idle management
-# (hypridle &) && loginctl unlock-session # Patched issue. wait for new release (https://github.com/hyprwm/hypridle/issues/7)
-
-# Notification Manager
-# swaync
-
-# nm-applet --indicator &
