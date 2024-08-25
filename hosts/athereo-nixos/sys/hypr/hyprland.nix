@@ -16,7 +16,6 @@
     eww
     swaynotificationcenter
     libnotify
-    rofi-wayland
     wl-clipboard
     grim
     slurp
