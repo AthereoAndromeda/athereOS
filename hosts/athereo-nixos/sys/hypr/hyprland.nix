@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   inputs,
   ...
@@ -14,7 +12,6 @@
   # Also check LibrePhoenix's setup
   environment.systemPackages = with pkgs; [
     eww
-    swaynotificationcenter
     libnotify
     wl-clipboard
     grim
