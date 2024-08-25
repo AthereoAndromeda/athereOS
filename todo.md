@@ -8,6 +8,9 @@ a handy list since i keep forgetting
 ## Hypr
 - [ ] plugins: Install `hyprexpo` or `hyprspace` when it finally works in NixOS
 - [x] hypridle: integrate with hyprlock
+- [ ] hyprland: Create search widget that locates an existing app and switches+focus on that workspace and app
+- [ ] hyprland: Create submap for special workspaces
+- [ ] hyprland: Create a `socials` special workspace keybind
 
 ## eww
 - [ ] eww: Submap detection using eww
@@ -23,6 +26,7 @@ a handy list since i keep forgetting
 - [ ] inhibit-idle and workspace submap detection
 - [ ] fix: wl-screenrec widget
 - [x] waybar: Add wallpaper-switcher. Switches between live wallpaper and static
+- [ ] feat: Add widget that detects special workspaces and its windows
 
 ## Others
 - [ ] rofi: Stylize powermenu
