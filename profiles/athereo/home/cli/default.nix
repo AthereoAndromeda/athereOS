@@ -1,7 +1,7 @@
 {...}: {
   imports = [
     ./shells
-    ./terminals/foot
+    ./terminals
     ./multiplexers/zellij
     ./apps
   ];
