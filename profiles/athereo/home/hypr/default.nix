@@ -15,5 +15,6 @@
     "hypr/start.sh".source = ./hyprland/start.sh;
     "hypr/bindings".source = ./hyprland/bindings;
     "hypr/submaps".source = ./hyprland/submaps;
+    "hypr/scripts".source = ./hyprland/scripts;
   };
 }
