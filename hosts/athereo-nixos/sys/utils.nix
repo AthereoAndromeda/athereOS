@@ -28,6 +28,7 @@
 
       # Images in fzf
       chafa
+      timg
 
       # Compression for swww
       lz4
