@@ -2,7 +2,7 @@
   imports = [
     ./avahi.nix
     ./bluetooth.nix
-    ./utils.nix
+    ./utils
     ./opengl.nix
     ./playerctl.nix
     ./virt.nix
