@@ -4,11 +4,14 @@
 #mpris {
 	@include theme;
 
-	margin-top: 6px;
-	margin-left: 8px;
+	margin: {	
+		top: 6px;
+		left: 8px;
+		bottom: 0px;
+	}
+	
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
 	/* color: #1A1826; */

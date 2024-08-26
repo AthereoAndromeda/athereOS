@@ -1,13 +1,19 @@
 @use "base16" as *; 
 @use "mixins" as *;
 
+%stats-margin {
+	margin: {
+		top: 6px;
+		left: 8px;
+		bottom: 0px;
+	}
+}
+
 #memory {
 	@include theme;
+	@extend %stats-margin;
 
-	margin-top: 6px;
-	margin-left: 8px;
 	padding-left: 10px;
-	margin-bottom: 0px;
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
@@ -17,11 +23,9 @@
 
 #cpu {
 	@include theme;
+	@extend %stats-margin;
 	
-	margin-top: 6px;
-	margin-left: 8px;
 	padding-left: 10px;
-	margin-bottom: 0px;
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;

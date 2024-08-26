@@ -1,11 +1,14 @@
 @use "base16" as *; 
 
 #battery {
-	margin-top: 6px;
-	margin-left: 8px;
+	margin: {
+    top: 6px;
+  	left: 8px;
+  	bottom: 0px;
+  }
+  
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
 	color: #161320;
@@ -14,17 +17,20 @@
 
 #battery.charging, #battery.plugged {
 	color: #161320;
-    background-color: #B5E8E0;
+  background-color: #B5E8E0;
 }
 
 #battery.critical:not(.charging) {
     background-color: #B5E8E0;
     color: #161320;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+
+    animation: {
+      name: blink;
+      duration: 0.5s;
+      timing-function: linear;
+      iteration-count: infinite;
+      direction: alternate;
+    }
 }
 
 @keyframes blink {
