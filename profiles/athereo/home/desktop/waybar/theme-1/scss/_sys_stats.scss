@@ -1,20 +1,11 @@
 @use "base16" as *; 
 @use "mixins" as *;
-
-%stats-margin {
-	margin: {
-		top: 6px;
-		left: 8px;
-		bottom: 0px;
-	}
-}
+@use "placeholders" as *;
 
 #memory {
 	@include theme;
-	@extend %stats-margin;
+	@extend %margin-padding;
 
-	padding-left: 10px;
-	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
 	/* color: #161320; */
@@ -23,10 +14,8 @@
 
 #cpu {
 	@include theme;
-	@extend %stats-margin;
+	@extend %margin-padding;
 	
-	padding-left: 10px;
-	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
 	/* color: #161320; */

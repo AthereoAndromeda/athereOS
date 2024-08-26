@@ -1,17 +1,11 @@
 @use "base16" as *; 
 @use "mixins" as *;
+@use "placeholders" as *;
 
 #clock {
 	@include theme;
+	@extend %margin-padding;
 
-	margin: {
-		top: 6px;
-		left: 8px;
-		bottom: 0px;
-	}
-
-	padding-left: 10px;
-	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
 	/* color: #161320; */

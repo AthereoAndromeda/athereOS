@@ -1,15 +1,12 @@
 @use "base16" as *; 
 @use "mixins" as m;
+@use "placeholders" as *;
 
 #wireplumber {
 	@include m.theme;
 	@include m.border;
+	@extend %margin-padding;
 
-	margin-top: 6px;
-	margin-left: 8px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
 	/* border-radius: 10px; */
 	/* border-style: solid; */
 	/* border-width: 3px; */ 
