@@ -29,6 +29,7 @@ a handy list since i keep forgetting
 - [ ] feat: Add widget that detects special workspaces and its windows
 
 ## Others
+- [ ] helix: Add keybind for yazi file picker (Check Yazi Tips)
 - [ ] rofi: Stylize powermenu
 - [ ] dev: Add `direnv` in swaync and rofi to make devving easier
 - [ ] theme: Add global theming and colors w/ base16
