@@ -50,6 +50,9 @@ list:
 history:
     nix profile history --profile /nix/var/nix/profiles/system
 
+delete-generations +gen:
+    echo $SUDO_PASS | sudo -S nix-env --profile /nix/var/nix/profiles/system --delete-generations {{gen}}
+
 # Optimize and compresses nix store. This may take a long while.
 [group('utils')]
 optimise:
