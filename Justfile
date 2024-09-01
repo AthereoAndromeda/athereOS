@@ -1,7 +1,7 @@
 set dotenv-load
 
 alias fmt := format
-alias b := build
+alias s := switch
 alias t := test
 alias td := test-debug
 alias up := update
@@ -10,9 +10,9 @@ default:
     just --list
 
 
-# Build the system w/o committing
+# Build the system and add the generation to the bootloader
 [group('build')]
-build: format _git-add
+switch: format _git-add
     echo $SUDO_PASS | sudo -S nixos-rebuild switch --flake .
 
 # Build in `test` mode
