@@ -20,6 +20,14 @@
   colorScheme = import ./nix-colors-conversion.nix {inherit config nix-colors my-utils;};
   # colorScheme = nix-colors.colorSchemes.rebecca;
 
+  # Fixes hyprpicker
+  home.pointerCursor = {
+    gtk.enable = true;
+    package = pkgs.gnome.adwaita-icon-theme;
+    name = "Adwaita";
+    size = 16;
+  };
+
   # Custom themes
   gtk-theme.tokyo-night.enable = false;
   gtk-theme.base16.enable = true;
