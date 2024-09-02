@@ -10,6 +10,7 @@
     ./zerotier.nix
 
     ./boot
+    ./crypto
     ./libs
     ./hypr
     ./lang

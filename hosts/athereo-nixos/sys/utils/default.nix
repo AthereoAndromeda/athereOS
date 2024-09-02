@@ -12,7 +12,6 @@
     xwaylandvideobridge
 
     brightnessctl
-    age
 
     # Utils for dotfile rebuilding
     alejandra
