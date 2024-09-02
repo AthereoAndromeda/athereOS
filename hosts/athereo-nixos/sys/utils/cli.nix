@@ -11,6 +11,7 @@
       bat
       neofetch
       btop
+      xcp
     ])
     ++ (with pkgs-unstable; [
       fastfetch
