@@ -6,6 +6,7 @@
 
     ./fend.nix
     ./httpie.nix
+    ./kalker.nix
     ./ngrok.nix
     ./wl-screenrec.nix
     ./yazi.nix
