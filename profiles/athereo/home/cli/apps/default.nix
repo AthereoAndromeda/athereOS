@@ -1,9 +1,9 @@
 {...}: {
   imports = [
-    ./calc
     ./helix
     ./fzf
     ./oh-my-posh
+    ./utils
 
     ./httpie.nix
     ./ngrok.nix
