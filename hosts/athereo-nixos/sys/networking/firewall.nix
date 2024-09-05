@@ -4,6 +4,7 @@
 
     allowedTCPPorts = [
       80
+      8080
       443
       25565 # Minecraft
       53317
