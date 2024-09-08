@@ -5,13 +5,12 @@
   makeWrapper,
 }: let
   pname = "anytype";
-  version = "0.42.3";
+  version = "0.42.8";
   name = "Anytype-${version}";
   src = fetchurl {
     url = "https://github.com/anyproto/anytype-ts/releases/download/v${version}/${name}.AppImage";
     name = "Anytype-${version}.AppImage";
-    # hash = "sha256-Rvl52nKrOWQfT2qgssEpFjQCjva54zPvm6aEXmO0NTc=";
-    hash = "sha256-4Tz080lNQXqTq+LEax4fYV27/DDSRUalpkO46KZ1ay8=";
+    hash = "sha256-MIPKfwIZQah6K+WOQZsTpVcOrws+f4oVa7BoW29K5BA=";
   };
   appimageContents = appimageTools.extractType2 {inherit name src;};
 in
