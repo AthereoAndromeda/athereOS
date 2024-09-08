@@ -38,7 +38,7 @@ update:
 
 # Cleans nix garbage
 [group('nix/utils')]
-clean older-than="10d":
+clean older-than="3d":
     echo $SUDO_PASS | sudo -S nix-collect-garbage --delete-older-than "{{older-than}}"
 
 # Lists all Nix Generations
