@@ -11,12 +11,12 @@
     # Only used to Generate GTK themes. Base16 is used for theming.
     nix-colors.url = "github:misterio77/nix-colors";
 
-    hyprland = {
-      type = "git";
-      url = "https://github.com/hyprwm/Hyprland";
-      submodules = true;
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
+    # hyprland = {
+    #   type = "git";
+    #   url = "https://github.com/hyprwm/Hyprland";
+    #   submodules = true;
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     tt-schemes = {
       url = "github:tinted-theming/schemes";
