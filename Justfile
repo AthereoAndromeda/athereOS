@@ -5,6 +5,7 @@ alias s := switch
 alias t := test
 alias td := test-debug
 alias up := update
+alias opt := optimise
 
 default:
     just --list
