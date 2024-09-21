@@ -1,7 +1,7 @@
 {...}: {
   imports = [
     ./osu-lazer.nix
-    ./simutrans.nix
+    # ./simutrans.nix
     ./gnome-games.nix
   ];
 }
