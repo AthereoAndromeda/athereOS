@@ -59,30 +59,17 @@ e.g.: `fix/nix/build: Fix thing`
 </details>
 
 ## Building
-Simply run the following:  
+For the first build, run the following:
 ```bash
 sudo nixos-rebuild switch --flake .
 ```
 
-This will install the `athereo-desktop` host and `athereo` profile.  
-These profiles will have the following installed by default:
-- just
-- alejandra
+This will install the `athereo-desktop` host and `athereo` profile. This will also
+install dependencies required to use `just`.
 
 And also make sure to edit `.env`
 
-Now for every further build, you can simply run `just build`, or check the recipes with `just --list`
-
-### Utils
-There are some useful utils defined in `Justfile`, but some
-dependencies are required:  
-- ripgrep (rg)
-
-### User Scripts
-These are miscellanoeus scripts not directly related to building the flake,
-but are nonetheless usefeul. These are located in `scripts/`.
-
-Some dependencies required:
-- nmcli
-- fzf
-
+After that, you may run the following to see the available recipes:
+```bash
+just
+```
