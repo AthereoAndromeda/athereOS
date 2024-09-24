@@ -2,9 +2,13 @@
   description = "Athereo's Desktop Flake";
 
   inputs = {
-    # Home-manager uses system nixpkgs (home-manager.useGlobalPackages = true)
     nixpkgs.url = "nixpkgs/nixos-24.05";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
+
+    # Home-manager uses system nixpkgs (home-manager.useGlobalPackages = true)
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
     zjstatus.url = "github:dj95/zjstatus";
     xremap.url = "github:xremap/nix-flake";
     base16.url = "github:SenchoPens/base16.nix";
