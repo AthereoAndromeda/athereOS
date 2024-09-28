@@ -11,7 +11,7 @@
 	  "custom/screenrecord"
 	],
 	"modules-center": ["mpris"],
-	"modules-right": [/*"cava",*/ "custom/wallpaper", "backlight","network" , "wireplumber","clock", "battery","custom/power"],
+	"modules-right": [/*"cava",*/ "custom/hypridle", "custom/wallpaper", "backlight","network" , "wireplumber","clock", "battery","custom/power"],
 
   "hyprland/workspaces": {
     "format": "<sub>{icon}</sub> {windows}",
@@ -180,5 +180,10 @@
     "custom/wallpaper":{
         "format":" ",
         "on-click": "~/.config/waybar/theme-1/scripts/switch-wallpaper.sh"
+    },
+
+    "custom/hypridle": {
+      "format": "",
+      "on-click": "~/.config/waybar/theme-1/scripts/toggle-hypridle.sh"
     }
 }

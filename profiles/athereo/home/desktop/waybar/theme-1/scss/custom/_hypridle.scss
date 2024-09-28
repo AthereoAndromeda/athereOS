@@ -1,0 +1,9 @@
+@use "../base16" as *; 
+@use "../mixins" as *;
+@use "../placeholders" as *;
+
+#custom-hypridle {
+  @extend %base;
+
+  font-size: 18px;
+}

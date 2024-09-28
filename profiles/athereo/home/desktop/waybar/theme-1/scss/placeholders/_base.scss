@@ -1,0 +1,7 @@
+@use "margin-padding" as *;
+@use "../mixins" as *;
+
+%base {
+  @include theme;
+  @extend %margin-padding;
+}
