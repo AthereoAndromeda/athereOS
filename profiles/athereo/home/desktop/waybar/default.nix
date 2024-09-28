@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: let
-  base16-text = import ./base16-text.nix config;
+  base16-text = import ./base16-text.nix config.scheme;
 
   build-scss = path:
     pkgs.stdenv.mkDerivation {
@@ -40,5 +40,8 @@ in {
     "waybar/theme-1/dist".source = "${build-scss ./theme-1/scss}/dist";
     "waybar/theme-1/config.jsonc".source = ./theme-1/config.jsonc;
     "waybar/theme-1/scripts".source = ./theme-1/scripts;
+
+    # Debug purposes
+    "waybar/theme-1/debug/base16.scss".text = base16-text;
   };
 }

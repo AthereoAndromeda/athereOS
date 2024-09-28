@@ -1,5 +1,5 @@
-config:
-with config.scheme.withHashtag; ''
+scheme:
+with scheme.withHashtag; ''
   $base00: ${base00};
   $base01: ${base01};
   $base02: ${base02};
