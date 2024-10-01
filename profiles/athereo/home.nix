@@ -34,10 +34,6 @@
 
   # programs.helix.extraConfig =
   #   builtins.readFile (config.scheme inputs.base16-helix);
-  programs.zathura.enable = true;
-
-  programs.zathura.extraConfig =
-    builtins.readFile (config.scheme inputs.base16-zathura);
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
