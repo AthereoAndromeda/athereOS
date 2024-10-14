@@ -2,13 +2,17 @@
   imports = [
     ./anytype.nix
     ./bottles.nix
-    ./gnome-apps.nix
     ./homebank.nix
 
     ./localsend/localsend.nix
     ./browsers
     # ./code-editors # Temporarily disable visual code editors. Create options for them instead
+    ./devices
+    ./documents
+    ./file-explorers
     ./instant-messaging
+    ./media
+    ./misc
   ];
 
   # Uncategorized for now
@@ -18,6 +22,5 @@
     libreoffice
     freecad
     obs-studio
-    mpv
   ];
 }
