@@ -1,5 +1,7 @@
 {...}: {
   imports = [
+    ./home.nix
+
     ./direnv.nix
     ./fonts.nix
 
