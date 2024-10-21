@@ -3,6 +3,7 @@ set dotenv-load
 alias fmt := format
 alias s := switch
 alias t := test
+alias l := list
 alias td := test-debug
 alias up := update
 alias opt := optimise
