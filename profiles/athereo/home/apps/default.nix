@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   imports = [
-    ./anytype.nix
     ./bottles.nix
     ./homebank.nix
 

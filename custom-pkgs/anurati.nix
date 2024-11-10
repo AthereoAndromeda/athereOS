@@ -19,9 +19,5 @@ stdenv.mkDerivation {
 
   meta = with lib; {
     description = "Cool Space Font";
-    # homepage = "https://anytype.io/";
-    # license = licenses.unfree;
-    # maintainers = with maintainers; [running-grass];
-    # platforms = ["x86_64-linux"];
   };
 }
