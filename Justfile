@@ -43,6 +43,11 @@ update:
 clean older-than="3d":
     echo $SUDO_PASS | sudo -S nix-collect-garbage --delete-older-than "{{older-than}}"
 
+# Cleans old nix garbage
+[group('nix/utils')]
+clean-old:
+    echo $SUDO_PASS | sudo -S nix-collect-garbage --delete-old
+
 # Lists all Nix Generations
 [group('nix/utils')]
 list:
