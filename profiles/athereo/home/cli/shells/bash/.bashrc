@@ -8,7 +8,7 @@ source /etc/profiles/per-user/$USER/etc/profile.d/hm-session-vars.sh
 # Spawns a foot terminal and runs yazi there
 #
 # This needs to be here because Zellij + Yazi sixel image previews is very glitchy
-function ya() {
+function yf() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
 	foot yazi "$@" --cwd-file="$tmp"
 	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
