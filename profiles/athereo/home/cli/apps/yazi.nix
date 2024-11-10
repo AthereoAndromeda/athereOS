@@ -2,11 +2,13 @@
   programs.yazi = {
     enable = true;
     enableBashIntegration = true;
+    shellWrapperName = "y";
 
+    # TIP: Check Yazi Nix Installation Docs
     keymap = {
       manager.prepend_keymap = [
         {
-          on = ["c"];
+          on = ["C"];
           run = "close";
           desc = "Close tab";
         }

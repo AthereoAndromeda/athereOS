@@ -5,16 +5,6 @@
 # Used if `home-manager.useUserPackages = true;`
 source /etc/profiles/per-user/$USER/etc/profile.d/hm-session-vars.sh
 
-# Runs yazi, but sets the PWD to the last exited dir
-function yy() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
-
 # Spawns a foot terminal and runs yazi there
 #
 # This needs to be here because Zellij + Yazi sixel image previews is very glitchy
