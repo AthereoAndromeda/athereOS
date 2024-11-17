@@ -71,20 +71,25 @@
       config.allowUnfreePredicate = pkg: true;
     };
 
-    scheme = "${inputs.tt-schemes}/base16/moonlight.yaml";
-    # scheme = "${inputs.tt-schemes}/base16/rebecca.yaml";
-    # scheme = "${inputs.tt-schemes}/base16/moonlight.yaml";
-    # scheme = "${inputs.tt-schemes}/base16/icy.yaml";
-    # scheme = "${inputs.tt-schemes}/base16/pasque.yaml";
-    # scheme = "${inputs.tt-schemes}/base16/mellow-purple.yaml";
-    # scheme = "${inputs.tt-schemes}/base16/stella.yaml";
-    # scheme = "${inputs.tt-schemes}/base16/nebula.yaml";
-    # scheme = "${inputs.tt-schemes}/base16/darkviolet.yaml";
-    # scheme = "${inputs.tt-schemes}/base16/catppuccin-frappe.yaml";
-    # scheme = "${inputs.tt-schemes}/base16/rose-pine-moon.yaml";       # Main
-    # scheme = "${inputs.tt-schemes}/base16/tokyodark.yaml";
-    # scheme = "${inputs.tt-schemes}/base16/tokyo-night-storm.yaml";
-    # scheme = "${inputs.tt-schemes}/base16/uwunicorn.yaml";
+    yaml = "${inputs.tt-schemes}/base16/moonlight.yaml";
+    # yaml = "${inputs.tt-schemes}/base16/rebecca.yaml";
+    # yaml = "${inputs.tt-schemes}/base16/moonlight.yaml";
+    # yaml = "${inputs.tt-schemes}/base16/icy.yaml";
+    # yaml = "${inputs.tt-schemes}/base16/pasque.yaml";
+    # yaml = "${inputs.tt-schemes}/base16/mellow-purple.yaml";
+    # yaml = "${inputs.tt-schemes}/base16/stella.yaml";
+    # yaml = "${inputs.tt-schemes}/base16/nebula.yaml";
+    # yaml = "${inputs.tt-schemes}/base16/darkviolet.yaml";
+    # yaml = "${inputs.tt-schemes}/base16/catppuccin-frappe.yaml";
+    # yaml = "${inputs.tt-schemes}/base16/rose-pine-moon.yaml"; # Main
+    # yaml = "${inputs.tt-schemes}/base16/tokyodark.yaml";
+    # yaml = "${inputs.tt-schemes}/base16/tokyo-night-storm.yaml";
+    # yaml = "${inputs.tt-schemes}/base16/uwunicorn.yaml";
+
+    scheme = {
+      inherit yaml;
+      use-ifd = "auto"; # to suppress errors, set to "always"
+    };
   in {
     nixosConfigurations = {
       athereo-nixos = lib.nixosSystem {
