@@ -27,28 +27,27 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages =
-    (with pkgs; [
-      # # It is sometimes useful to fine-tune packages, for example, by applying
-      # # overrides. You can do that directly here, just don't forget the
-      # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-      # # fonts?
-      # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+  home.packages = with pkgs; [
+    # # It is sometimes useful to fine-tune packages, for example, by applying
+    # # overrides. You can do that directly here, just don't forget the
+    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
+    # # fonts?
+    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
-      # # You can also create simple shell scripts directly inside your
-      # # configuration. For example, this adds a command 'my-hello' to your
-      # # environment:
+    # # You can also create simple shell scripts directly inside your
+    # # configuration. For example, this adds a command 'my-hello' to your
+    # # environment:
 
-      (pkgs.writeShellScriptBin "delete-cliphist-items" ''
-        cliphist list | fzf --multi | cliphist delete
-      '')
+    (pkgs.writeShellScriptBin "delete-cliphist-items" ''
+      cliphist list | fzf --multi | cliphist delete
+    '')
 
-      socat
-    ])
-    ++ (with pkgs-unstable; [
-      spotube # ''
-      obsidian # Stable is potentially unsafe
-    ]);
+    socat
+    obsidian
+    spotube
+  ];
+  # ++ (with pkgs-unstable; [
+  # ]);
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
