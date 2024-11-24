@@ -4,9 +4,7 @@
   ...
 }: {
   imports = [
-    # ./layouts/default.nix
-    # ./layouts/new.nix
-    ./layouts/stolen.nix
+    ./layouts/slanted.nix
   ];
 
   home.packages = with pkgs; [
