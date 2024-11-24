@@ -88,7 +88,7 @@
 
     scheme = {
       inherit yaml;
-      use-ifd = "auto"; # to suppress errors, set to "always"
+      # use-ifd = "auto"; # to suppress errors, set to "always"
     };
   in {
     nixosConfigurations = {
