@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./layouts/slanted.nix
+    ./plugins
   ];
 
   home.packages = with pkgs; [

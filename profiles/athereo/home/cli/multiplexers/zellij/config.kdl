@@ -3,6 +3,54 @@ keybinds {
     shared_except "locked" {
         // Custom Keybinds
         bind "Alt m" { NewTab; SwitchToMode "Normal"; }
+            bind "Ctrl y" {
+                LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij_forgot.wasm" {
+                    "Lock"                  "ctrl + g"
+                    "Unlock"                "ctrl + g"
+                    "New Pane"              "ctrl + p + n"
+                    "New Pane"              "Alt + N"
+                    "Change Focus of pane"  "ctrl + p + arrow key"
+                    "Close Pane"            "ctrl + p + x"
+                    "Rename Pane"           "ctrl + p + c"
+                    "Toggle Fullscreen"     "ctrl + p + f"
+                    "Toggle Floating pane"  "ctrl + p + w"
+                    "Toggle Embed pane"     "ctrl + p + e"
+                    "Choose Right pane"     "ctrl + p + l"
+                    "Choose Left pane"      "ctrl + p + r"
+                    "Choose Upper pane"     "ctrl + p + k"
+                    "Choose Lower pane"     "ctrl + p + j"
+                    "New Tab"               "ctrl + t + n"
+                    "New Tab"               "Alt + M"
+                    "Close Tab"             "ctrl + t + x"
+                    "Change Focus of tab"   "ctrl + t + arrow key"
+                    "Rename Tab"            "ctrl + t + r"
+                    "Sync Tab"              "ctrl + t + s"
+                    "Brake Pane to new tab" "ctrl + t + b"
+                    "Brake Pane left"       "ctrl + t + ["
+                    "Brake Pane right"      "ctrl + t + ]"
+                    "Toggle Tab"            "ctrl + t + tab"
+                    "Increase Pane size"    "ctrl + n + +"
+                    "Decrease Pane size"    "ctrl + n + -"
+                    "Increase Pane top"     "ctrl + n + k"
+                    "Increase Pane right"   "ctrl + n + l"
+                    "Increase Pane bottom"  "ctrl + n + j"
+                    "Increase Pane left"    "ctrl + n + h"
+                    "Decrease Pane top"     "ctrl + n + K"
+                    "Decrease Pane right"   "ctrl + n + L"
+                    "Decrease Pane bottom"  "ctrl + n + J"
+                    "Decrease Pane left"    "ctrl + n + H"
+                    "Move Pane to top"      "ctrl + h + k"
+                    "Move Pane to right"    "ctrl + h + l"
+                    "Move Pane to bottom"   "ctrl + h + j"
+                    "Move Pane to left"     "ctrl + h + h"
+                    "Search"                "ctrl + s + s"
+                    "Go Into edit mode"     "ctrl + s + e"
+                    "Detach Session"        "ctrl + o + w"
+                    "Open Session manager"  "ctrl + o + w"
+                    "Quit Zellij"           "ctrl + q"
+                    floating true
+            }
+        }
     }
 }
 
