@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-24.05";
+    nixpkgs-2411.url = "nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
 
     # Home-manager uses system nixpkgs (home-manager.useGlobalPackages = true)
@@ -46,6 +47,7 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-2411,
     nixpkgs-unstable,
     home-manager,
     base16,
@@ -59,8 +61,14 @@
     overlays = import ./overlays {inherit inputs;};
     my-utils = import ./my-utils {inherit lib;};
 
-    pkgs = import nixpkgs {
-      inherit system overlays;
+    # pkgs = import nixpkgs {
+    #   inherit system overlays;
+    #   config.allowUnfree = true;
+    #   config.allowUnfreePredicate = pkg: true;
+    # };
+
+    pkgs-2411 = import nixpkgs-2411 {
+      inherit system;
       config.allowUnfree = true;
       config.allowUnfreePredicate = pkg: true;
     };
@@ -123,7 +131,7 @@
               users.athereo = import ./profiles/athereo/home.nix;
 
               extraSpecialArgs = {
-                inherit pkgs-unstable inputs scheme nix-colors my-utils;
+                inherit pkgs-unstable pkgs-2411 inputs scheme nix-colors my-utils;
               };
             };
           }
@@ -132,7 +140,7 @@
         ];
 
         specialArgs = {
-          inherit pkgs-unstable inputs nix-colors my-utils;
+          inherit pkgs-unstable pkgs-2411 inputs nix-colors my-utils;
         };
       };
     };
