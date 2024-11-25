@@ -4,7 +4,7 @@
   ...
 }: {
   xdg.configFile = {
-    "zellij/layouts/default.swap.kdl".source = ./slanted.swap.kdl;
+    "zellij/layouts/default.swap.kdl".source = ./default.swap.kdl;
     "zellij/layouts/default.kdl".text = with config.scheme.withHashtag; ''
        layout {
          default_tab_template {

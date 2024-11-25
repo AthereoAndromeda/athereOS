@@ -4,8 +4,7 @@
   ...
 }: {
   imports = [
-    ./layouts/slanted.nix
-    ./layouts/minimal.nix
+    ./layouts
     ./plugins
   ];
 
