@@ -1,4 +1,5 @@
-# Athereo's Dotfiles
+# AthereOS
+**AKA Athereo's Dotfiles.**  
 My desktop configuration using NixOS and Home Manager.
 
 - **Window Manager:** `Hyprland`
@@ -55,6 +56,7 @@ e.g.: `fix/nix/build: Fix thing`
 - `chore/`: Not exactly a fix, not exactly a feature. Use for something like `nix flake update`
 - `style/`: Any visual style changes. *NOT code style change. thats `refactor`*
 - `refactor/`: Code change or formatting
+- `dev/`: Any development related
 
 </details>
 
