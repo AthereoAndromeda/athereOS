@@ -6,6 +6,7 @@ alias t := test
 alias l := list
 alias td := test-debug
 alias up := update
+alias upc := update-ci
 alias opt := optimise
 
 default:
@@ -37,6 +38,11 @@ format:
 [group('nix/utils')]
 update:
     echo $SUDO_PASS | sudo -S nix flake update
+   
+# Update Nix Flakes, Test, Commit
+[group('nix/utils')]
+update-ci: update test
+    git commit -m "chore(nix): Flake Update"
 
 # Cleans nix garbage
 [group('nix/utils')]
