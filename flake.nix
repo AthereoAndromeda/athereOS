@@ -2,8 +2,8 @@
   description = "Athereo's Desktop Flake";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-24.05";
-    nixpkgs-2411.url = "nixpkgs/nixos-24.11";
+    nixpkgs-2405.url = "nixpkgs/nixos-24.05";
+    nixpkgs.url = "nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
 
     # Home-manager uses system nixpkgs (home-manager.useGlobalPackages = true)
@@ -47,7 +47,7 @@
   outputs = {
     self,
     nixpkgs,
-    nixpkgs-2411,
+    nixpkgs-2405,
     nixpkgs-unstable,
     home-manager,
     base16,
@@ -67,7 +67,7 @@
     #   config.allowUnfreePredicate = pkg: true;
     # };
 
-    pkgs-2411 = import nixpkgs-2411 {
+    pkgs-2405 = import nixpkgs-2405 {
       inherit system;
       config.allowUnfree = true;
       config.allowUnfreePredicate = pkg: true;
@@ -131,7 +131,7 @@
               users.athereo = import ./profiles/athereo/home.nix;
 
               extraSpecialArgs = {
-                inherit pkgs-unstable pkgs-2411 inputs scheme nix-colors my-utils;
+                inherit pkgs-unstable pkgs-2405 inputs scheme nix-colors my-utils;
               };
             };
           }
@@ -140,7 +140,7 @@
         ];
 
         specialArgs = {
-          inherit pkgs-unstable pkgs-2411 inputs nix-colors my-utils;
+          inherit pkgs-unstable pkgs-2405 inputs nix-colors my-utils;
         };
       };
     };
