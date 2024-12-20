@@ -1,6 +1,6 @@
 {...}: {
   imports = [
-    ./eww
+    # ./eww
     ./gtk
     ./rofi
     ./swaync
