@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    gnome.gnome-characters
-    gnome.gnome-font-viewer
+    gnome-characters
+    gnome-font-viewer
   ];
 }
