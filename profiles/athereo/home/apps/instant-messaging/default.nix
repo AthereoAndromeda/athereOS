@@ -1,8 +1,8 @@
 {...}: {
   imports = [
-    ./caprine.nix
+    # ./caprine.nix
     ./element-desktop.nix
-    ./telegram-desktop.nix
+    # ./telegram-desktop.nix
     ./vesktop.nix
   ];
 }
