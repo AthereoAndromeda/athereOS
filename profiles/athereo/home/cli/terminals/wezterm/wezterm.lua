@@ -11,6 +11,8 @@ else
   config.enable_wayland = true
 end
 
+config.front_end = "WebGpu"
+
 config.window_background_opacity = 0.4
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 10.5
@@ -24,6 +26,7 @@ config.window_padding = {
   top = 0,
   bottom = 0,
 }
+
 
 
 return config
