@@ -42,7 +42,7 @@ update:
 # Update Nix Flakes, Test, Commit
 [group('nix/utils')]
 update-ci: update test
-    git commit -m "chore(nix): Flake Update"
+    git commit -m "chore(nix): Update Flake"
 
 # Cleans nix garbage
 [group('nix/utils')]
