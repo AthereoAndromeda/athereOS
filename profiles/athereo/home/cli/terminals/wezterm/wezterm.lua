@@ -13,7 +13,7 @@ end
 
 config.front_end = "WebGpu"
 
-config.window_background_opacity = 0.4
+config.window_background_opacity = 0.3
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 10.5
 -- config.enable_tab_bar = false
@@ -27,6 +27,8 @@ config.window_padding = {
   bottom = 0,
 }
 
-
+config.colors = {
+  background = "black"
+}
 
 return config
