@@ -10,9 +10,9 @@
     # set the flake package
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 
-    # plugins = [
-    #   inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
-    # ];
+    plugins = [
+      inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
+    ];
   };
 
   xdg.configFile = {

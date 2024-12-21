@@ -23,6 +23,11 @@
       # inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    Hyprspace = {
+      url = "github:KZDKM/Hyprspace";
+      inputs.hyprland.follows = "hyprland";
+    };
+
     tt-schemes = {
       url = "github:tinted-theming/schemes";
       flake = false;
