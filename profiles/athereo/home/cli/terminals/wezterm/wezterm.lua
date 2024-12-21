@@ -4,7 +4,7 @@ local wezterm = require 'wezterm'
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
--- This is a workaround until the issue is fixed
+-- BUG: This is a workaround until the issue is fixed
 if os.getenv("XDG_CURRENT_DESKTOP") == "Hyprland" then
   config.enable_wayland = false
 else
